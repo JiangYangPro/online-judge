@@ -43,11 +43,11 @@ public class RabbitMQConfig {
         SimpleRabbitListenerContainerFactory factory = new SimpleRabbitListenerContainerFactory();
         factory.setConnectionFactory(connectionFactory);
         factory.setMessageConverter(messageConverter());
-        // 设置并发消费者数量
-        factory.setConcurrentConsumers(10);
-        factory.setMaxConcurrentConsumers(20);
-        // 设置预取数量
-        factory.setPrefetchCount(10);
+        // 设置并发消费者数量，与容器池大小匹配
+        factory.setConcurrentConsumers(8);
+        factory.setMaxConcurrentConsumers(15);
+        // 设置预取数量，避免单个消费者获取过多消息
+        factory.setPrefetchCount(3);
         // 设置确认模式
         factory.setAcknowledgeMode(org.springframework.amqp.core.AcknowledgeMode.AUTO);
         return factory;

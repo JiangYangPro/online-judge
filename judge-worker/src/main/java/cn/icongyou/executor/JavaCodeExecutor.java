@@ -7,12 +7,9 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
-import java.io.*;
-import java.nio.file.Files;
-import java.nio.file.Path;
-import java.util.UUID;
 import java.util.concurrent.*;
 import org.slf4j.Logger;
+import java.util.concurrent.CompletableFuture;
 
 /**
  * @ClassName JavaCodeExecutor
@@ -74,18 +71,9 @@ public class JavaCodeExecutor {
                 return result;
             }
 
-            // 创建临时工作目录
-            Path tempDir = Files.createTempDirectory("judge-" + UUID.randomUUID());
-            File sourceFile = tempDir.resolve(filename).toFile();
-
-            // 写入 Java 源代码
-            try (FileWriter fw = new FileWriter(sourceFile)) {
-                fw.write(request.getSourceCode());
-            }
-
-            // 使用docker-java API执行代码
-            logger.debug("使用docker-java API执行代码");
-            return executeInDockerWithAPI(containerName, tempDir, filename, className, request, result);
+            // 直接在容器内创建和执行代码，避免主机IO操作
+            logger.debug("直接在容器内创建和执行代码");
+            return executeInDockerDirectly(containerName, filename, className, request, result);
             
         } catch (Exception e) {
             logger.error("提交ID: {} 执行时发生异常", request.getSubmissionId(), e);
@@ -101,17 +89,19 @@ public class JavaCodeExecutor {
     }
     
     /**
-     * 使用docker-java API执行代码
+     * 直接在容器内创建和执行代码（优化版本）
      */
-    private CodeExecutionResult executeInDockerWithAPI(String containerName, Path tempDir, 
-                                                      String filename, String className, 
-                                                      CodeExecutionRequest request, 
-                                                      CodeExecutionResult result) throws Exception {
+    private CodeExecutionResult executeInDockerDirectly(String containerName, String filename, 
+                                                       String className, CodeExecutionRequest request, 
+                                                       CodeExecutionResult result) throws Exception {
         
         try {
-            // 确保容器中的workspace目录存在
-            String mkdirOutput = containerPool.executeCommand(containerName, 
+            // 异步创建workspace目录
+            CompletableFuture<String> mkdirFuture = containerPool.executeCommandAsync(containerName, 
                 "sh", "-c", "mkdir -p /workspace");
+            
+            // 等待目录创建完成
+            String mkdirOutput = mkdirFuture.get(10, TimeUnit.SECONDS);
             
             if (mkdirOutput == null) {
                 result.setStatus(JudgeStatus.INTERNAL_ERROR);
@@ -119,23 +109,29 @@ public class JavaCodeExecutor {
                 return result;
             }
             
-            // 将源代码文件复制到容器中
-            ProcessBuilder copyCmd = new ProcessBuilder(
-                "docker", "cp", tempDir.toString() + "/" + filename, 
-                containerName + ":/workspace/" + filename
-            );
-            Process copyProcess = copyCmd.start();
-            int copyExit = copyProcess.waitFor();
+            // 直接在容器内创建Java源文件
+            // 使用base64编码避免shell注入和特殊字符问题
+            String base64Code = java.util.Base64.getEncoder().encodeToString(
+                request.getSourceCode().getBytes("UTF-8"));
             
-            if (copyExit != 0) {
+            CompletableFuture<String> createFileFuture = containerPool.executeCommandAsync(containerName, 
+                "sh", "-c", "echo '" + base64Code + "' | base64 -d > /workspace/" + filename);
+            
+            // 等待文件创建完成
+            String createFileOutput = createFileFuture.get(10, TimeUnit.SECONDS);
+            
+            if (createFileOutput == null) {
                 result.setStatus(JudgeStatus.INTERNAL_ERROR);
-                result.setStderr("无法复制源代码文件到容器");
+                result.setStderr("无法在容器中创建源文件");
                 return result;
             }
             
-            // 编译代码
-            String compileOutput = containerPool.executeCommand(containerName, 
+            // 异步编译代码
+            CompletableFuture<String> compileFuture = containerPool.executeCommandAsync(containerName, 
                 "javac", "/workspace/" + filename);
+            
+            // 等待编译完成
+            String compileOutput = compileFuture.get(30, TimeUnit.SECONDS);
 
             if (compileOutput == null || !compileOutput.isEmpty()) {
                 result.setStatus(JudgeStatus.COMPILE_ERROR);
@@ -143,76 +139,89 @@ public class JavaCodeExecutor {
                 return result;
             }
 
-            // 运行代码
+            // 异步运行代码
             long startTime = System.currentTimeMillis();
-            String runOutput = "";
-            int exitCode = 0;
+            CompletableFuture<String> runFuture;
             
             if (request.getStdin() != null && !request.getStdin().isEmpty()) {
-                // 有输入数据，需要特殊处理
-                runOutput = executeWithInput(containerName, className, request.getStdin());
-                exitCode = 0; // 简化处理，实际应该从输出中解析
+                // 有输入数据，直接在容器内处理
+                runFuture = executeWithInputDirectly(containerName, className, request.getStdin());
             } else {
                 // 无输入数据，直接执行
-                runOutput = containerPool.executeCommand(containerName, 
+                runFuture = containerPool.executeCommandAsync(containerName, 
                     "java", "-cp", "/workspace", className);
-                exitCode = 0; // 简化处理
             }
             
+            // 等待运行完成
+            String runOutput = runFuture.get(30, TimeUnit.SECONDS);
             long endTime = System.currentTimeMillis();
 
-            result.setExitCode(exitCode);
+            result.setExitCode(0); // 简化处理
             result.setExecutionTimeMs(endTime - startTime);
             result.setStdout(runOutput != null ? runOutput : "");
-            result.setStatus(exitCode == 0 ? JudgeStatus.ACCEPTED : JudgeStatus.RUNTIME_ERROR);
+            result.setStatus(JudgeStatus.ACCEPTED);
 
             logger.info("提交ID: {} 运行结束，状态: {}, 耗时: {}ms", 
                        request.getSubmissionId(), result.getStatus(), result.getExecutionTimeMs());
             
         } finally {
-            // 清理容器中的文件
-            try {
-                containerPool.executeCommand(containerName, "sh", "-c", 
-                    "rm -f /workspace/" + filename + " /workspace/" + className + ".class");
-            } catch (Exception e) {
-                logger.debug("清理容器文件时发生错误: {}", e.getMessage());
-            }
+            // 异步清理容器中的文件
+            CompletableFuture.runAsync(() -> {
+                try {
+                    containerPool.executeCommandAsync(containerName, "sh", "-c", 
+                        "rm -f /workspace/" + filename + " /workspace/" + className + ".class");
+                } catch (Exception e) {
+                    logger.debug("清理容器文件时发生错误: {}", e.getMessage());
+                }
+            });
         }
         
         return result;
     }
     
     /**
-     * 执行带输入的命令
+     * 直接在容器内处理带输入的执行（优化版本）
      */
-    private String executeWithInput(String containerName, String className, String stdin) {
-        try {
-            // 创建临时输入文件
-            Path tempInputFile = Files.createTempFile("input-", ".txt");
-            try (FileWriter fw = new FileWriter(tempInputFile.toFile())) {
-                fw.write(stdin);
+    private CompletableFuture<String> executeWithInputDirectly(String containerName, String className, String stdin) {
+        return CompletableFuture.supplyAsync(() -> {
+            try {
+                // 直接在容器内创建输入文件
+                // 使用base64编码避免shell注入和特殊字符问题
+                String base64Stdin = java.util.Base64.getEncoder().encodeToString(
+                    stdin.getBytes("UTF-8"));
+                
+                CompletableFuture<String> createInputFuture = containerPool.executeCommandAsync(containerName, 
+                    "sh", "-c", "echo '" + base64Stdin + "' | base64 -d > /workspace/input.txt");
+                
+                // 等待输入文件创建完成
+                String createInputOutput = createInputFuture.get(10, TimeUnit.SECONDS);
+                
+                if (createInputOutput == null) {
+                    logger.error("无法在容器中创建输入文件");
+                    return "";
+                }
+                
+                // 异步执行命令，重定向输入
+                CompletableFuture<String> outputFuture = containerPool.executeCommandAsync(containerName, 
+                    "sh", "-c", "java -cp /workspace " + className + " < /workspace/input.txt");
+                
+                String output = outputFuture.get(30, TimeUnit.SECONDS);
+                
+                // 异步清理输入文件
+                CompletableFuture.runAsync(() -> {
+                    try {
+                        containerPool.executeCommandAsync(containerName, "sh", "-c", "rm -f /workspace/input.txt");
+                    } catch (Exception e) {
+                        logger.debug("清理输入文件时发生错误: {}", e.getMessage());
+                    }
+                });
+                
+                return output;
+            } catch (Exception e) {
+                logger.error("直接在容器内执行带输入的命令时发生错误", e);
+                return "";
             }
-            
-            // 复制输入文件到容器
-            ProcessBuilder copyInputCmd = new ProcessBuilder(
-                "docker", "cp", tempInputFile.toString(), 
-                containerName + ":/workspace/input.txt"
-            );
-            Process copyInputProcess = copyInputCmd.start();
-            copyInputProcess.waitFor();
-            
-            // 执行命令，重定向输入
-            String output = containerPool.executeCommand(containerName, 
-                "sh", "-c", "java -cp /workspace " + className + " < /workspace/input.txt");
-            
-            // 清理输入文件
-            Files.deleteIfExists(tempInputFile);
-            
-            return output;
-        } catch (Exception e) {
-            logger.error("执行带输入的命令时发生错误", e);
-            return "";
-        }
+        });
     }
     
     // 关闭线程池
