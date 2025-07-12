@@ -12,15 +12,11 @@
         <module>common-model</module>
         <module>judge-service</module>
         <module>judge-worker</module>
-        <module>common-model</module>
-        <module>judge-service</module>
-        <module>judge-worker</module>
-        <module>docker</module>
     </modules>
 
     <properties>
         <java.version>17</java.version>
-        <spring.boot.version>3.2.5</spring.boot.version>
+        <spring.boot.version>2.7.18</spring.boot.version>
     </properties>
 
     <dependencyManagement>

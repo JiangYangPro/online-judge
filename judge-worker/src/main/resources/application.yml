@@ -4,10 +4,62 @@ spring:
     port: 5672
     username: guest
     password: guest
+    # 连接池配置
+    cache:
+      channel:
+        size: 25
+        checkout-timeout: 0
+    # 发布确认
+    publisher-confirm-type: correlated
+    # 发布返回
+    publisher-returns: true
+    # 模板配置
+    template:
+      retry:
+        enabled: true
+        initial-interval: 1000
+        max-attempts: 3
+        max-interval: 10000
+        multiplier: 1.0
+
+# 线程池配置
+thread-pool:
+  core-size: 10
+  max-size: 20
+  queue-capacity: 100
+  keep-alive-seconds: 60
+
+# 执行器配置
+executor:
+  timeout-seconds: 30
+  memory-limit-mb: 512
+  cpu-limit: 1.0
+  pool-size: 2  # 减少初始容器池大小
+  max-containers: 5  # 保持最大容器数
+
+# Docker配置
+docker:
+  host: tcp://localhost:2375  # Windows Docker Desktop TCP连接
+  connection-timeout: 30000
+  read-timeout: 60000
+  max-connections: 100
+  max-connections-per-route: 10
 
 logging:
   level:
     org.example: debug
+    cn.icongyou: info
+    com.github.dockerjava: warn  # 减少docker-java的日志输出
+  pattern:
+    console: "%d{yyyy-MM-dd HH:mm:ss} [%thread] %-5level %logger{36} - %msg%n"
+
 server:
   port: 8081
+  # 增加服务器线程池
+  tomcat:
+    threads:
+      max: 200
+      min-spare: 10
+    max-connections: 8192
+    accept-count: 100
 

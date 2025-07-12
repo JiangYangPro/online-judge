@@ -2,12 +2,15 @@ package cn.icongyou.listener;
 
 import cn.icongyou.common.CodeExecutionResult;
 import cn.icongyou.common.JudgeStatus;
+import cn.icongyou.service.ResultService;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.amqp.rabbit.annotation.RabbitListener;
 import org.springframework.stereotype.Component;
 
 /**
  * @ClassName JudgeResultConsumer
- * @Description TODO
+ * @Description 消费判题结果
  * @Author JiangYang
  * @Date 2025/7/9 19:39
  * @Version 1.0
@@ -15,22 +18,25 @@ import org.springframework.stereotype.Component;
 
 @Component
 public class CodeExecutionResultConsumer {
+    private static final Logger logger = LoggerFactory.getLogger(CodeExecutionResultConsumer.class);
+    private final ResultService resultService;
+
+    public CodeExecutionResultConsumer(ResultService resultService) {
+        this.resultService = resultService;
+    }
 
     @RabbitListener(queues = "result.queue")
     public void receiveResult(CodeExecutionResult result) {
+        // 存入Redis
+        resultService.saveResult(result);
         // 这里只打印，后续可以写入数据库
-        System.out.println("✅ 判题结果已返回！");
-        System.out.println("提交 ID: " + result.getSubmissionId());
-        System.out.println("状态: " + result.getStatus());
-        System.out.println("输出: " + result.getStdout());
-        System.out.println("错误输出: " + result.getStderr());
-        System.out.println("退出码: " + result.getExitCode());
-        System.out.println("耗时(ms): " + result.getExecutionTimeMs());
-
-        // 示例：如果需要持久化，可以通过 JPA 存入数据库
-        if (result.getStatus() == JudgeStatus.COMPILE_ERROR) {
-            // 记录 compile 错误日志 或 分析题目难度等
-        }
+        logger.info("✅ 判题结果已返回！");
+        logger.info("提交 ID: " + result.getSubmissionId());
+        logger.info("状态: " + result.getStatus());
+        logger.info("输出: " + result.getStdout());
+        logger.info("错误输出: " + result.getStderr());
+        logger.info("退出码: " + result.getExitCode());
+        logger.info("耗时(ms): " + result.getExecutionTimeMs());
     }
 }
 

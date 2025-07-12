@@ -1,0 +1,29 @@
+version: "3.8"
+
+services:
+  rabbitmq:
+    image: rabbitmq:3-management
+    container_name: oneline-judge-rabbitmq
+    ports:
+      - "5672:5672"       # AMQP 服务端口
+      - "15672:15672"     # 管理界面
+    environment:
+      RABBITMQ_DEFAULT_USER: guest
+      RABBITMQ_DEFAULT_PASS: guest
+    volumes:
+      - rabbitmq_data:/var/lib/rabbitmq
+    restart: unless-stopped
+
+  redis:
+    image: redis:7-alpine
+    container_name: oneline-judge-redis
+    ports:
+      - "6379:6379"       # Redis 服务端口
+    volumes:
+      - redis_data:/data
+    restart: unless-stopped
+    command: redis-server --appendonly yes --requirepass ""
+
+volumes:
+  rabbitmq_data:
+  redis_data:
