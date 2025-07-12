@@ -1,5 +1,7 @@
 # Online Judge 在线判题系统
 
+[English](README_EN.md) | 中文
+
 一个基于微服务架构的高性能在线判题系统，支持Java代码的编译、执行和判题。
 
 ## 📋 项目简介
@@ -96,7 +98,7 @@ oneline-judge/
 ### 1. 克隆项目
 
 ```bash
-git clone <repository-url>
+git clone https://github.com/JiangYangPro/online-judge
 cd oneline-judge
 ```
 
@@ -146,17 +148,17 @@ POST /judge/submit
 Content-Type: application/json
 
 {
-  "sourceCode": "public class Main { public static void main(String[] args) { System.out.println(\"Hello World\"); } }",
-  "stdin": "optional input data",
-  "timeLimitMs": 5000,
-  "memoryLimitMb": 512
+  "language": "java",
+  "sourceCode": "import java.util.Scanner;\n\npublic class Main {\n    public static void main(String[] args) {\n        Scanner sc = new Scanner(System.in);\n        int a = sc.nextInt();\n        int b = sc.nextInt();\n        System.out.println(a + b);\n    }\n}",
+  "stdin": "3 5"
 }
+
 ```
 
 响应：
 ```json
 {
-  "message": "Submission accepted: <submission-id>"
+  Submission accepted: 61d60c91-9515-40c1-8a83-d324e0f1e490
 }
 ```
 
@@ -169,13 +171,12 @@ GET /judge/result/{submissionId}
 响应：
 ```json
 {
-  "submissionId": "uuid",
+  "submissionId": "61d60c91-9515-40c1-8a83-d324e0f1e490",
   "status": "ACCEPTED",
-  "stdout": "Hello World",
-  "stderr": "",
+  "stdout": "8\n",
+  "stderr": null,
   "exitCode": 0,
-  "executionTimeMs": 150,
-  "memoryUsageKb": 1024
+  "executionTimeMs": 654
 }
 ```
 
@@ -250,9 +251,9 @@ jmeter -n -t jemeter测试计划.jmx -l results.jtl -e -o report
 ## 🤝 贡献指南
 
 1. Fork 本仓库
-2. 创建特性分支 (`git checkout -b feature/AmazingFeature`)
+2. 创建特性分支 (`git checkout -b JiangYangPro/online-judge`)
 3. 提交更改 (`git commit -m 'Add some AmazingFeature'`)
-4. 推送到分支 (`git push origin feature/AmazingFeature`)
+4. 推送到分支 (`git push origin JiangYangPro/online-judge`)
 5. 开启 Pull Request
 
 ## 📄 许可证
