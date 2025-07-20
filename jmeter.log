@@ -1,0 +1,475 @@
+2025-07-13 13:20:21,738 INFO o.a.j.u.JMeterUtils: Setting Locale to en_EN
+2025-07-13 13:20:21,760 INFO o.a.j.JMeter: Loading user properties from: D:\HomePath\apache-jmeter-5.6.3\bin\user.properties
+2025-07-13 13:20:21,761 INFO o.a.j.JMeter: Loading system properties from: D:\HomePath\apache-jmeter-5.6.3\bin\system.properties
+2025-07-13 13:20:21,770 INFO o.a.j.JMeter: Copyright (c) 1998-2024 The Apache Software Foundation
+2025-07-13 13:20:21,770 INFO o.a.j.JMeter: Version 5.6.3
+2025-07-13 13:20:21,770 INFO o.a.j.JMeter: java.version=21.0.6
+2025-07-13 13:20:21,770 INFO o.a.j.JMeter: java.vm.name=Java HotSpot(TM) 64-Bit Server VM
+2025-07-13 13:20:21,770 INFO o.a.j.JMeter: os.name=Windows 11
+2025-07-13 13:20:21,770 INFO o.a.j.JMeter: os.arch=amd64
+2025-07-13 13:20:21,770 INFO o.a.j.JMeter: os.version=10.0
+2025-07-13 13:20:21,770 INFO o.a.j.JMeter: file.encoding=UTF-8
+2025-07-13 13:20:21,770 INFO o.a.j.JMeter: java.awt.headless=null
+2025-07-13 13:20:21,770 INFO o.a.j.JMeter: Max memory     =1073741824
+2025-07-13 13:20:21,770 INFO o.a.j.JMeter: Available Processors =16
+2025-07-13 13:20:21,781 INFO o.a.j.JMeter: Default Locale=English (EN)
+2025-07-13 13:20:21,781 INFO o.a.j.JMeter: JMeter  Locale=English (EN)
+2025-07-13 13:20:21,781 INFO o.a.j.JMeter: JMeterHome=D:\HomePath\apache-jmeter-5.6.3
+2025-07-13 13:20:21,781 INFO o.a.j.JMeter: user.dir  =D:\Desktop\online-judge
+2025-07-13 13:20:21,781 INFO o.a.j.JMeter: PWD       =D:\Desktop\online-judge
+2025-07-13 13:20:21,785 INFO o.a.j.JMeter: IP: 172.31.208.1 Name: lime FullName: lime.mshome.net
+2025-07-13 13:20:21,807 INFO o.a.j.JMeter: Loaded icon properties from org/apache/jmeter/images/icon.properties
+2025-07-13 13:20:22,128 INFO o.a.j.JMeterGuiLauncher: Setting LAF to: com.github.weisj.darklaf.DarkLaf:com.github.weisj.darklaf.theme.DarculaTheme
+2025-07-13 13:20:54,969 INFO o.a.j.s.FileServer: Default base='D:\Desktop\online-judge'
+2025-07-13 13:20:58,566 INFO o.a.j.g.a.Load: Loading file: D:\Desktop\online-judge\jemeter测试计划.jmx
+2025-07-13 13:20:58,567 INFO o.a.j.s.FileServer: Set new base='D:\Desktop\online-judge'
+2025-07-13 13:20:58,832 INFO o.a.j.s.SaveService: Testplan (JMX) version: 2.2. Testlog (JTL) version: 2.2
+2025-07-13 13:20:58,869 INFO o.a.j.s.SaveService: Using SaveService properties version 5.0
+2025-07-13 13:20:58,872 INFO o.a.j.s.SaveService: Using SaveService properties file encoding UTF-8
+2025-07-13 13:20:58,874 INFO o.a.j.s.SaveService: Loading file: D:\Desktop\online-judge\jemeter测试计划.jmx
+2025-07-13 13:20:58,912 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for text/html is org.apache.jmeter.protocol.http.parser.LagartoBasedHtmlParser
+2025-07-13 13:20:58,913 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for application/xhtml+xml is org.apache.jmeter.protocol.http.parser.LagartoBasedHtmlParser
+2025-07-13 13:20:58,913 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for application/xml is org.apache.jmeter.protocol.http.parser.LagartoBasedHtmlParser
+2025-07-13 13:20:58,913 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for text/xml is org.apache.jmeter.protocol.http.parser.LagartoBasedHtmlParser
+2025-07-13 13:20:58,913 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for text/vnd.wap.wml is org.apache.jmeter.protocol.http.parser.RegexpHTMLParser
+2025-07-13 13:20:58,913 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for text/css is org.apache.jmeter.protocol.http.parser.CssParser
+2025-07-13 13:20:59,334 INFO o.a.j.s.SampleResult: Note: Sample TimeStamps are START times
+2025-07-13 13:20:59,334 INFO o.a.j.s.SampleResult: sampleresult.default.encoding is set to UTF-8
+2025-07-13 13:20:59,334 INFO o.a.j.s.SampleResult: sampleresult.useNanoTime=true
+2025-07-13 13:20:59,334 INFO o.a.j.s.SampleResult: sampleresult.nanoThreadSleep=5000
+2025-07-13 13:20:59,627 INFO o.a.j.s.FileServer: Set new base='D:\Desktop\online-judge'
+2025-07-13 13:21:21,754 INFO o.a.j.e.StandardJMeterEngine: Running the test!
+2025-07-13 13:21:21,754 INFO o.a.j.s.SampleEvent: List of sample_variables: []
+2025-07-13 13:21:21,755 INFO o.a.j.s.SampleEvent: List of sample_variables: []
+2025-07-13 13:21:21,756 INFO o.a.j.e.u.CompoundVariable: Note: Function class names must contain the string: '.functions.'
+2025-07-13 13:21:21,756 INFO o.a.j.e.u.CompoundVariable: Note: Function class names must not contain the string: '.gui.'
+2025-07-13 13:21:21,815 INFO o.a.j.g.u.JMeterMenuBar: setRunning(true, *local*)
+2025-07-13 13:21:21,849 INFO o.a.j.e.StandardJMeterEngine: Starting ThreadGroup: 1 : 基础代码提交测试
+2025-07-13 13:21:21,850 INFO o.a.j.e.StandardJMeterEngine: Starting 5 threads for group 基础代码提交测试.
+2025-07-13 13:21:21,850 INFO o.a.j.e.StandardJMeterEngine: Thread will continue on error
+2025-07-13 13:21:21,850 INFO o.a.j.t.ThreadGroup: Starting thread group... number=1 threads=5 ramp-up=10 delayedStart=false
+2025-07-13 13:21:21,855 INFO o.a.j.t.JMeterThread: Thread started: 基础代码提交测试 1-1
+2025-07-13 13:21:21,855 INFO o.a.j.t.ThreadGroup: Started thread group number 1
+2025-07-13 13:21:21,855 INFO o.a.j.e.StandardJMeterEngine: All thread groups have been started
+2025-07-13 13:21:21,872 INFO o.a.j.p.h.s.HTTPHCAbstractImpl: Local host = lime
+2025-07-13 13:21:21,882 INFO o.a.j.p.h.s.HTTPHC4Impl: HTTP request retry count = 0
+2025-07-13 13:21:22,377 INFO o.a.j.t.JMeterThread: Thread is done: 基础代码提交测试 1-1
+2025-07-13 13:21:22,377 INFO o.a.j.t.JMeterThread: Thread finished: 基础代码提交测试 1-1
+2025-07-13 13:21:23,851 INFO o.a.j.t.JMeterThread: Thread started: 基础代码提交测试 1-2
+2025-07-13 13:21:24,005 INFO o.a.j.t.JMeterThread: Thread is done: 基础代码提交测试 1-2
+2025-07-13 13:21:24,006 INFO o.a.j.t.JMeterThread: Thread finished: 基础代码提交测试 1-2
+2025-07-13 13:21:25,861 INFO o.a.j.t.JMeterThread: Thread started: 基础代码提交测试 1-3
+2025-07-13 13:21:25,980 INFO o.a.j.t.JMeterThread: Thread is done: 基础代码提交测试 1-3
+2025-07-13 13:21:25,980 INFO o.a.j.t.JMeterThread: Thread finished: 基础代码提交测试 1-3
+2025-07-13 13:21:27,859 INFO o.a.j.t.JMeterThread: Thread started: 基础代码提交测试 1-4
+2025-07-13 13:21:27,951 INFO o.a.j.t.JMeterThread: Thread is done: 基础代码提交测试 1-4
+2025-07-13 13:21:27,951 INFO o.a.j.t.JMeterThread: Thread finished: 基础代码提交测试 1-4
+2025-07-13 13:21:29,864 INFO o.a.j.t.JMeterThread: Thread started: 基础代码提交测试 1-5
+2025-07-13 13:21:29,946 INFO o.a.j.t.JMeterThread: Thread is done: 基础代码提交测试 1-5
+2025-07-13 13:21:29,946 INFO o.a.j.t.JMeterThread: Thread finished: 基础代码提交测试 1-5
+2025-07-13 13:21:29,947 INFO o.a.j.e.StandardJMeterEngine: Notifying test listeners of end of test
+2025-07-13 13:21:29,948 INFO o.a.j.g.u.JMeterMenuBar: setRunning(false, *local*)
+2025-07-13 13:22:08,925 INFO o.a.j.e.StandardJMeterEngine: Running the test!
+2025-07-13 13:22:08,926 INFO o.a.j.s.SampleEvent: List of sample_variables: []
+2025-07-13 13:22:08,926 INFO o.a.j.g.u.JMeterMenuBar: setRunning(true, *local*)
+2025-07-13 13:22:08,959 INFO o.a.j.e.StandardJMeterEngine: Starting ThreadGroup: 1 : 基础代码提交测试
+2025-07-13 13:22:08,960 INFO o.a.j.e.StandardJMeterEngine: Starting 5 threads for group 基础代码提交测试.
+2025-07-13 13:22:08,960 INFO o.a.j.e.StandardJMeterEngine: Thread will continue on error
+2025-07-13 13:22:08,960 INFO o.a.j.t.ThreadGroup: Starting thread group... number=1 threads=5 ramp-up=10 delayedStart=false
+2025-07-13 13:22:08,961 INFO o.a.j.t.JMeterThread: Thread started: 基础代码提交测试 1-1
+2025-07-13 13:22:08,962 INFO o.a.j.t.ThreadGroup: Started thread group number 1
+2025-07-13 13:22:08,962 INFO o.a.j.e.StandardJMeterEngine: All thread groups have been started
+2025-07-13 13:22:09,044 INFO o.a.j.t.JMeterThread: Thread is done: 基础代码提交测试 1-1
+2025-07-13 13:22:09,045 INFO o.a.j.t.JMeterThread: Thread finished: 基础代码提交测试 1-1
+2025-07-13 13:22:10,961 INFO o.a.j.t.JMeterThread: Thread started: 基础代码提交测试 1-2
+2025-07-13 13:22:11,014 INFO o.a.j.t.JMeterThread: Thread is done: 基础代码提交测试 1-2
+2025-07-13 13:22:11,014 INFO o.a.j.t.JMeterThread: Thread finished: 基础代码提交测试 1-2
+2025-07-13 13:22:12,962 INFO o.a.j.t.JMeterThread: Thread started: 基础代码提交测试 1-3
+2025-07-13 13:22:13,020 INFO o.a.j.t.JMeterThread: Thread is done: 基础代码提交测试 1-3
+2025-07-13 13:22:13,020 INFO o.a.j.t.JMeterThread: Thread finished: 基础代码提交测试 1-3
+2025-07-13 13:22:14,962 INFO o.a.j.t.JMeterThread: Thread started: 基础代码提交测试 1-4
+2025-07-13 13:22:15,043 INFO o.a.j.t.JMeterThread: Thread is done: 基础代码提交测试 1-4
+2025-07-13 13:22:15,044 INFO o.a.j.t.JMeterThread: Thread finished: 基础代码提交测试 1-4
+2025-07-13 13:22:16,968 INFO o.a.j.t.JMeterThread: Thread started: 基础代码提交测试 1-5
+2025-07-13 13:22:17,030 INFO o.a.j.t.JMeterThread: Thread is done: 基础代码提交测试 1-5
+2025-07-13 13:22:17,031 INFO o.a.j.t.JMeterThread: Thread finished: 基础代码提交测试 1-5
+2025-07-13 13:22:17,032 INFO o.a.j.e.StandardJMeterEngine: Notifying test listeners of end of test
+2025-07-13 13:22:17,032 INFO o.a.j.g.u.JMeterMenuBar: setRunning(false, *local*)
+2025-07-13 13:22:58,298 INFO o.a.j.e.StandardJMeterEngine: Running the test!
+2025-07-13 13:22:58,298 INFO o.a.j.s.SampleEvent: List of sample_variables: []
+2025-07-13 13:22:58,299 INFO o.a.j.g.u.JMeterMenuBar: setRunning(true, *local*)
+2025-07-13 13:22:58,326 INFO o.a.j.e.StandardJMeterEngine: Starting ThreadGroup: 1 : 基础代码提交测试
+2025-07-13 13:22:58,326 INFO o.a.j.e.StandardJMeterEngine: Starting 10 threads for group 基础代码提交测试.
+2025-07-13 13:22:58,327 INFO o.a.j.e.StandardJMeterEngine: Thread will continue on error
+2025-07-13 13:22:58,327 INFO o.a.j.t.ThreadGroup: Starting thread group... number=1 threads=10 ramp-up=10 delayedStart=false
+2025-07-13 13:22:58,328 INFO o.a.j.t.JMeterThread: Thread started: 基础代码提交测试 1-1
+2025-07-13 13:22:58,330 INFO o.a.j.t.ThreadGroup: Started thread group number 1
+2025-07-13 13:22:58,330 INFO o.a.j.e.StandardJMeterEngine: All thread groups have been started
+2025-07-13 13:22:58,391 INFO o.a.j.t.JMeterThread: Thread is done: 基础代码提交测试 1-1
+2025-07-13 13:22:58,391 INFO o.a.j.t.JMeterThread: Thread finished: 基础代码提交测试 1-1
+2025-07-13 13:22:59,331 INFO o.a.j.t.JMeterThread: Thread started: 基础代码提交测试 1-2
+2025-07-13 13:22:59,412 INFO o.a.j.t.JMeterThread: Thread is done: 基础代码提交测试 1-2
+2025-07-13 13:22:59,412 INFO o.a.j.t.JMeterThread: Thread finished: 基础代码提交测试 1-2
+2025-07-13 13:23:00,329 INFO o.a.j.t.JMeterThread: Thread started: 基础代码提交测试 1-3
+2025-07-13 13:23:00,398 INFO o.a.j.t.JMeterThread: Thread is done: 基础代码提交测试 1-3
+2025-07-13 13:23:00,398 INFO o.a.j.t.JMeterThread: Thread finished: 基础代码提交测试 1-3
+2025-07-13 13:23:01,327 INFO o.a.j.t.JMeterThread: Thread started: 基础代码提交测试 1-4
+2025-07-13 13:23:01,382 INFO o.a.j.t.JMeterThread: Thread is done: 基础代码提交测试 1-4
+2025-07-13 13:23:01,382 INFO o.a.j.t.JMeterThread: Thread finished: 基础代码提交测试 1-4
+2025-07-13 13:23:02,327 INFO o.a.j.t.JMeterThread: Thread started: 基础代码提交测试 1-5
+2025-07-13 13:23:02,382 INFO o.a.j.t.JMeterThread: Thread is done: 基础代码提交测试 1-5
+2025-07-13 13:23:02,383 INFO o.a.j.t.JMeterThread: Thread finished: 基础代码提交测试 1-5
+2025-07-13 13:23:03,328 INFO o.a.j.t.JMeterThread: Thread started: 基础代码提交测试 1-6
+2025-07-13 13:23:03,375 INFO o.a.j.t.JMeterThread: Thread is done: 基础代码提交测试 1-6
+2025-07-13 13:23:03,375 INFO o.a.j.t.JMeterThread: Thread finished: 基础代码提交测试 1-6
+2025-07-13 13:23:04,328 INFO o.a.j.t.JMeterThread: Thread started: 基础代码提交测试 1-7
+2025-07-13 13:23:04,393 INFO o.a.j.t.JMeterThread: Thread is done: 基础代码提交测试 1-7
+2025-07-13 13:23:04,393 INFO o.a.j.t.JMeterThread: Thread finished: 基础代码提交测试 1-7
+2025-07-13 13:23:05,335 INFO o.a.j.t.JMeterThread: Thread started: 基础代码提交测试 1-8
+2025-07-13 13:23:05,384 INFO o.a.j.t.JMeterThread: Thread is done: 基础代码提交测试 1-8
+2025-07-13 13:23:05,385 INFO o.a.j.t.JMeterThread: Thread finished: 基础代码提交测试 1-8
+2025-07-13 13:23:06,332 INFO o.a.j.t.JMeterThread: Thread started: 基础代码提交测试 1-9
+2025-07-13 13:23:06,410 INFO o.a.j.t.JMeterThread: Thread is done: 基础代码提交测试 1-9
+2025-07-13 13:23:06,411 INFO o.a.j.t.JMeterThread: Thread finished: 基础代码提交测试 1-9
+2025-07-13 13:23:07,332 INFO o.a.j.t.JMeterThread: Thread started: 基础代码提交测试 1-10
+2025-07-13 13:23:07,399 INFO o.a.j.t.JMeterThread: Thread is done: 基础代码提交测试 1-10
+2025-07-13 13:23:07,400 INFO o.a.j.t.JMeterThread: Thread finished: 基础代码提交测试 1-10
+2025-07-13 13:23:07,400 INFO o.a.j.e.StandardJMeterEngine: Notifying test listeners of end of test
+2025-07-13 13:23:07,401 INFO o.a.j.g.u.JMeterMenuBar: setRunning(false, *local*)
+2025-07-13 13:24:24,877 INFO o.a.j.e.StandardJMeterEngine: Running the test!
+2025-07-13 13:24:24,877 INFO o.a.j.s.SampleEvent: List of sample_variables: []
+2025-07-13 13:24:24,878 INFO o.a.j.g.u.JMeterMenuBar: setRunning(true, *local*)
+2025-07-13 13:24:24,909 INFO o.a.j.e.StandardJMeterEngine: Starting ThreadGroup: 1 : 基础代码提交测试
+2025-07-13 13:24:24,909 INFO o.a.j.e.StandardJMeterEngine: Starting 5 threads for group 基础代码提交测试.
+2025-07-13 13:24:24,909 INFO o.a.j.e.StandardJMeterEngine: Thread will continue on error
+2025-07-13 13:24:24,909 INFO o.a.j.t.ThreadGroup: Starting thread group... number=1 threads=5 ramp-up=10 delayedStart=false
+2025-07-13 13:24:24,910 INFO o.a.j.t.JMeterThread: Thread started: 基础代码提交测试 1-1
+2025-07-13 13:24:24,912 INFO o.a.j.t.ThreadGroup: Started thread group number 1
+2025-07-13 13:24:24,912 INFO o.a.j.e.StandardJMeterEngine: All thread groups have been started
+2025-07-13 13:24:24,972 INFO o.a.j.t.JMeterThread: Thread is done: 基础代码提交测试 1-1
+2025-07-13 13:24:24,973 INFO o.a.j.t.JMeterThread: Thread finished: 基础代码提交测试 1-1
+2025-07-13 13:24:26,910 INFO o.a.j.t.JMeterThread: Thread started: 基础代码提交测试 1-2
+2025-07-13 13:24:26,981 INFO o.a.j.t.JMeterThread: Thread is done: 基础代码提交测试 1-2
+2025-07-13 13:24:26,981 INFO o.a.j.t.JMeterThread: Thread finished: 基础代码提交测试 1-2
+2025-07-13 13:24:28,911 INFO o.a.j.t.JMeterThread: Thread started: 基础代码提交测试 1-3
+2025-07-13 13:24:28,952 INFO o.a.j.t.JMeterThread: Thread is done: 基础代码提交测试 1-3
+2025-07-13 13:24:28,952 INFO o.a.j.t.JMeterThread: Thread finished: 基础代码提交测试 1-3
+2025-07-13 13:24:30,920 INFO o.a.j.t.JMeterThread: Thread started: 基础代码提交测试 1-4
+2025-07-13 13:24:30,972 INFO o.a.j.t.JMeterThread: Thread is done: 基础代码提交测试 1-4
+2025-07-13 13:24:30,972 INFO o.a.j.t.JMeterThread: Thread finished: 基础代码提交测试 1-4
+2025-07-13 13:24:32,924 INFO o.a.j.t.JMeterThread: Thread started: 基础代码提交测试 1-5
+2025-07-13 13:24:32,967 INFO o.a.j.t.JMeterThread: Thread is done: 基础代码提交测试 1-5
+2025-07-13 13:24:32,967 INFO o.a.j.t.JMeterThread: Thread finished: 基础代码提交测试 1-5
+2025-07-13 13:24:32,968 INFO o.a.j.e.StandardJMeterEngine: Notifying test listeners of end of test
+2025-07-13 13:24:32,968 INFO o.a.j.g.u.JMeterMenuBar: setRunning(false, *local*)
+2025-07-13 13:28:19,521 INFO o.a.j.e.StandardJMeterEngine: Running the test!
+2025-07-13 13:28:19,521 INFO o.a.j.s.SampleEvent: List of sample_variables: []
+2025-07-13 13:28:19,521 INFO o.a.j.g.u.JMeterMenuBar: setRunning(true, *local*)
+2025-07-13 13:28:19,553 INFO o.a.j.e.StandardJMeterEngine: Starting ThreadGroup: 1 : 基础代码提交测试
+2025-07-13 13:28:19,554 INFO o.a.j.e.StandardJMeterEngine: Starting 100 threads for group 基础代码提交测试.
+2025-07-13 13:28:19,554 INFO o.a.j.e.StandardJMeterEngine: Thread will continue on error
+2025-07-13 13:28:19,554 INFO o.a.j.t.ThreadGroup: Starting thread group... number=1 threads=100 ramp-up=10 delayedStart=false
+2025-07-13 13:28:19,555 INFO o.a.j.t.JMeterThread: Thread started: 基础代码提交测试 1-1
+2025-07-13 13:28:19,604 INFO o.a.j.t.ThreadGroup: Started thread group number 1
+2025-07-13 13:28:19,604 INFO o.a.j.e.StandardJMeterEngine: All thread groups have been started
+2025-07-13 13:28:19,655 INFO o.a.j.t.JMeterThread: Thread started: 基础代码提交测试 1-2
+2025-07-13 13:28:19,762 INFO o.a.j.t.JMeterThread: Thread started: 基础代码提交测试 1-3
+2025-07-13 13:28:19,869 INFO o.a.j.t.JMeterThread: Thread started: 基础代码提交测试 1-4
+2025-07-13 13:28:19,962 INFO o.a.j.t.JMeterThread: Thread started: 基础代码提交测试 1-5
+2025-07-13 13:28:20,056 INFO o.a.j.t.JMeterThread: Thread started: 基础代码提交测试 1-6
+2025-07-13 13:28:20,125 INFO o.a.j.t.JMeterThread: Thread is done: 基础代码提交测试 1-3
+2025-07-13 13:28:20,126 INFO o.a.j.t.JMeterThread: Thread finished: 基础代码提交测试 1-3
+2025-07-13 13:28:20,142 INFO o.a.j.t.JMeterThread: Thread is done: 基础代码提交测试 1-2
+2025-07-13 13:28:20,142 INFO o.a.j.t.JMeterThread: Thread finished: 基础代码提交测试 1-2
+2025-07-13 13:28:20,165 INFO o.a.j.t.JMeterThread: Thread started: 基础代码提交测试 1-7
+2025-07-13 13:28:20,219 INFO o.a.j.t.JMeterThread: Thread is done: 基础代码提交测试 1-1
+2025-07-13 13:28:20,219 INFO o.a.j.t.JMeterThread: Thread finished: 基础代码提交测试 1-1
+2025-07-13 13:28:20,258 INFO o.a.j.t.JMeterThread: Thread started: 基础代码提交测试 1-8
+2025-07-13 13:28:20,273 INFO o.a.j.t.JMeterThread: Thread is done: 基础代码提交测试 1-4
+2025-07-13 13:28:20,273 INFO o.a.j.t.JMeterThread: Thread finished: 基础代码提交测试 1-4
+2025-07-13 13:28:20,365 INFO o.a.j.t.JMeterThread: Thread started: 基础代码提交测试 1-9
+2025-07-13 13:28:20,379 INFO o.a.j.t.JMeterThread: Thread is done: 基础代码提交测试 1-5
+2025-07-13 13:28:20,380 INFO o.a.j.t.JMeterThread: Thread finished: 基础代码提交测试 1-5
+2025-07-13 13:28:20,406 INFO o.a.j.t.JMeterThread: Thread is done: 基础代码提交测试 1-6
+2025-07-13 13:28:20,406 INFO o.a.j.t.JMeterThread: Thread finished: 基础代码提交测试 1-6
+2025-07-13 13:28:20,457 INFO o.a.j.t.JMeterThread: Thread started: 基础代码提交测试 1-10
+2025-07-13 13:28:20,460 INFO o.a.j.t.JMeterThread: Thread is done: 基础代码提交测试 1-7
+2025-07-13 13:28:20,461 INFO o.a.j.t.JMeterThread: Thread finished: 基础代码提交测试 1-7
+2025-07-13 13:28:20,557 INFO o.a.j.t.JMeterThread: Thread is done: 基础代码提交测试 1-8
+2025-07-13 13:28:20,557 INFO o.a.j.t.JMeterThread: Thread finished: 基础代码提交测试 1-8
+2025-07-13 13:28:20,565 INFO o.a.j.t.JMeterThread: Thread started: 基础代码提交测试 1-11
+2025-07-13 13:28:20,594 INFO o.a.j.t.JMeterThread: Thread is done: 基础代码提交测试 1-9
+2025-07-13 13:28:20,594 INFO o.a.j.t.JMeterThread: Thread finished: 基础代码提交测试 1-9
+2025-07-13 13:28:20,658 INFO o.a.j.t.JMeterThread: Thread started: 基础代码提交测试 1-12
+2025-07-13 13:28:20,765 INFO o.a.j.t.JMeterThread: Thread started: 基础代码提交测试 1-13
+2025-07-13 13:28:20,780 INFO o.a.j.t.JMeterThread: Thread is done: 基础代码提交测试 1-10
+2025-07-13 13:28:20,781 INFO o.a.j.t.JMeterThread: Thread finished: 基础代码提交测试 1-10
+2025-07-13 13:28:20,821 INFO o.a.j.t.JMeterThread: Thread is done: 基础代码提交测试 1-11
+2025-07-13 13:28:20,821 INFO o.a.j.t.JMeterThread: Thread finished: 基础代码提交测试 1-11
+2025-07-13 13:28:20,822 INFO o.a.j.t.JMeterThread: Thread is done: 基础代码提交测试 1-12
+2025-07-13 13:28:20,822 INFO o.a.j.t.JMeterThread: Thread finished: 基础代码提交测试 1-12
+2025-07-13 13:28:20,866 INFO o.a.j.t.JMeterThread: Thread started: 基础代码提交测试 1-14
+2025-07-13 13:28:20,964 INFO o.a.j.t.JMeterThread: Thread started: 基础代码提交测试 1-15
+2025-07-13 13:28:20,964 INFO o.a.j.t.JMeterThread: Thread is done: 基础代码提交测试 1-13
+2025-07-13 13:28:20,964 INFO o.a.j.t.JMeterThread: Thread finished: 基础代码提交测试 1-13
+2025-07-13 13:28:21,055 INFO o.a.j.t.JMeterThread: Thread started: 基础代码提交测试 1-16
+2025-07-13 13:28:21,139 INFO o.a.j.t.JMeterThread: Thread is done: 基础代码提交测试 1-14
+2025-07-13 13:28:21,140 INFO o.a.j.t.JMeterThread: Thread finished: 基础代码提交测试 1-14
+2025-07-13 13:28:21,161 INFO o.a.j.t.JMeterThread: Thread started: 基础代码提交测试 1-17
+2025-07-13 13:28:21,232 INFO o.a.j.t.JMeterThread: Thread is done: 基础代码提交测试 1-16
+2025-07-13 13:28:21,232 INFO o.a.j.t.JMeterThread: Thread finished: 基础代码提交测试 1-16
+2025-07-13 13:28:21,232 INFO o.a.j.t.JMeterThread: Thread is done: 基础代码提交测试 1-15
+2025-07-13 13:28:21,232 INFO o.a.j.t.JMeterThread: Thread finished: 基础代码提交测试 1-15
+2025-07-13 13:28:21,268 INFO o.a.j.t.JMeterThread: Thread started: 基础代码提交测试 1-18
+2025-07-13 13:28:21,304 INFO o.a.j.t.JMeterThread: Thread is done: 基础代码提交测试 1-17
+2025-07-13 13:28:21,304 INFO o.a.j.t.JMeterThread: Thread finished: 基础代码提交测试 1-17
+2025-07-13 13:28:21,361 INFO o.a.j.t.JMeterThread: Thread started: 基础代码提交测试 1-19
+2025-07-13 13:28:21,367 INFO o.a.j.t.JMeterThread: Thread is done: 基础代码提交测试 1-18
+2025-07-13 13:28:21,368 INFO o.a.j.t.JMeterThread: Thread finished: 基础代码提交测试 1-18
+2025-07-13 13:28:21,447 INFO o.a.j.t.JMeterThread: Thread is done: 基础代码提交测试 1-19
+2025-07-13 13:28:21,447 INFO o.a.j.t.JMeterThread: Thread finished: 基础代码提交测试 1-19
+2025-07-13 13:28:21,468 INFO o.a.j.t.JMeterThread: Thread started: 基础代码提交测试 1-20
+2025-07-13 13:28:21,559 INFO o.a.j.t.JMeterThread: Thread started: 基础代码提交测试 1-21
+2025-07-13 13:28:21,628 INFO o.a.j.t.JMeterThread: Thread is done: 基础代码提交测试 1-20
+2025-07-13 13:28:21,629 INFO o.a.j.t.JMeterThread: Thread finished: 基础代码提交测试 1-20
+2025-07-13 13:28:21,666 INFO o.a.j.t.JMeterThread: Thread started: 基础代码提交测试 1-22
+2025-07-13 13:28:21,694 INFO o.a.j.t.JMeterThread: Thread is done: 基础代码提交测试 1-21
+2025-07-13 13:28:21,694 INFO o.a.j.t.JMeterThread: Thread finished: 基础代码提交测试 1-21
+2025-07-13 13:28:21,752 INFO o.a.j.t.JMeterThread: Thread is done: 基础代码提交测试 1-22
+2025-07-13 13:28:21,753 INFO o.a.j.t.JMeterThread: Thread finished: 基础代码提交测试 1-22
+2025-07-13 13:28:21,758 INFO o.a.j.t.JMeterThread: Thread started: 基础代码提交测试 1-23
+2025-07-13 13:28:21,839 INFO o.a.j.t.JMeterThread: Thread is done: 基础代码提交测试 1-23
+2025-07-13 13:28:21,839 INFO o.a.j.t.JMeterThread: Thread finished: 基础代码提交测试 1-23
+2025-07-13 13:28:21,865 INFO o.a.j.t.JMeterThread: Thread started: 基础代码提交测试 1-24
+2025-07-13 13:28:21,938 INFO o.a.j.t.JMeterThread: Thread is done: 基础代码提交测试 1-24
+2025-07-13 13:28:21,938 INFO o.a.j.t.JMeterThread: Thread finished: 基础代码提交测试 1-24
+2025-07-13 13:28:21,957 INFO o.a.j.t.JMeterThread: Thread started: 基础代码提交测试 1-25
+2025-07-13 13:28:22,042 INFO o.a.j.t.JMeterThread: Thread is done: 基础代码提交测试 1-25
+2025-07-13 13:28:22,043 INFO o.a.j.t.JMeterThread: Thread finished: 基础代码提交测试 1-25
+2025-07-13 13:28:22,066 INFO o.a.j.t.JMeterThread: Thread started: 基础代码提交测试 1-26
+2025-07-13 13:28:22,157 INFO o.a.j.t.JMeterThread: Thread started: 基础代码提交测试 1-27
+2025-07-13 13:28:22,254 INFO o.a.j.t.JMeterThread: Thread is done: 基础代码提交测试 1-26
+2025-07-13 13:28:22,255 INFO o.a.j.t.JMeterThread: Thread finished: 基础代码提交测试 1-26
+2025-07-13 13:28:22,264 INFO o.a.j.t.JMeterThread: Thread started: 基础代码提交测试 1-28
+2025-07-13 13:28:22,276 INFO o.a.j.t.JMeterThread: Thread is done: 基础代码提交测试 1-27
+2025-07-13 13:28:22,277 INFO o.a.j.t.JMeterThread: Thread finished: 基础代码提交测试 1-27
+2025-07-13 13:28:22,334 INFO o.a.j.t.JMeterThread: Thread is done: 基础代码提交测试 1-28
+2025-07-13 13:28:22,334 INFO o.a.j.t.JMeterThread: Thread finished: 基础代码提交测试 1-28
+2025-07-13 13:28:22,371 INFO o.a.j.t.JMeterThread: Thread started: 基础代码提交测试 1-29
+2025-07-13 13:28:22,455 INFO o.a.j.t.JMeterThread: Thread is done: 基础代码提交测试 1-29
+2025-07-13 13:28:22,455 INFO o.a.j.t.JMeterThread: Thread finished: 基础代码提交测试 1-29
+2025-07-13 13:28:22,463 INFO o.a.j.t.JMeterThread: Thread started: 基础代码提交测试 1-30
+2025-07-13 13:28:22,568 INFO o.a.j.t.JMeterThread: Thread started: 基础代码提交测试 1-31
+2025-07-13 13:28:22,606 INFO o.a.j.t.JMeterThread: Thread is done: 基础代码提交测试 1-30
+2025-07-13 13:28:22,606 INFO o.a.j.t.JMeterThread: Thread finished: 基础代码提交测试 1-30
+2025-07-13 13:28:22,655 INFO o.a.j.t.JMeterThread: Thread started: 基础代码提交测试 1-32
+2025-07-13 13:28:22,691 INFO o.a.j.t.JMeterThread: Thread is done: 基础代码提交测试 1-31
+2025-07-13 13:28:22,692 INFO o.a.j.t.JMeterThread: Thread finished: 基础代码提交测试 1-31
+2025-07-13 13:28:22,741 INFO o.a.j.t.JMeterThread: Thread is done: 基础代码提交测试 1-32
+2025-07-13 13:28:22,741 INFO o.a.j.t.JMeterThread: Thread finished: 基础代码提交测试 1-32
+2025-07-13 13:28:22,755 INFO o.a.j.t.JMeterThread: Thread started: 基础代码提交测试 1-33
+2025-07-13 13:28:22,855 INFO o.a.j.t.JMeterThread: Thread started: 基础代码提交测试 1-34
+2025-07-13 13:28:22,865 INFO o.a.j.t.JMeterThread: Thread is done: 基础代码提交测试 1-33
+2025-07-13 13:28:22,865 INFO o.a.j.t.JMeterThread: Thread finished: 基础代码提交测试 1-33
+2025-07-13 13:28:22,924 INFO o.a.j.t.JMeterThread: Thread is done: 基础代码提交测试 1-34
+2025-07-13 13:28:22,925 INFO o.a.j.t.JMeterThread: Thread finished: 基础代码提交测试 1-34
+2025-07-13 13:28:22,957 INFO o.a.j.t.JMeterThread: Thread started: 基础代码提交测试 1-35
+2025-07-13 13:28:23,026 INFO o.a.j.t.JMeterThread: Thread is done: 基础代码提交测试 1-35
+2025-07-13 13:28:23,026 INFO o.a.j.t.JMeterThread: Thread finished: 基础代码提交测试 1-35
+2025-07-13 13:28:23,056 INFO o.a.j.t.JMeterThread: Thread started: 基础代码提交测试 1-36
+2025-07-13 13:28:23,156 INFO o.a.j.t.JMeterThread: Thread started: 基础代码提交测试 1-37
+2025-07-13 13:28:23,157 INFO o.a.j.t.JMeterThread: Thread is done: 基础代码提交测试 1-36
+2025-07-13 13:28:23,157 INFO o.a.j.t.JMeterThread: Thread finished: 基础代码提交测试 1-36
+2025-07-13 13:28:23,224 INFO o.a.j.t.JMeterThread: Thread is done: 基础代码提交测试 1-37
+2025-07-13 13:28:23,224 INFO o.a.j.t.JMeterThread: Thread finished: 基础代码提交测试 1-37
+2025-07-13 13:28:23,256 INFO o.a.j.t.JMeterThread: Thread started: 基础代码提交测试 1-38
+2025-07-13 13:28:23,320 INFO o.a.j.t.JMeterThread: Thread is done: 基础代码提交测试 1-38
+2025-07-13 13:28:23,320 INFO o.a.j.t.JMeterThread: Thread finished: 基础代码提交测试 1-38
+2025-07-13 13:28:23,356 INFO o.a.j.t.JMeterThread: Thread started: 基础代码提交测试 1-39
+2025-07-13 13:28:23,427 INFO o.a.j.t.JMeterThread: Thread is done: 基础代码提交测试 1-39
+2025-07-13 13:28:23,427 INFO o.a.j.t.JMeterThread: Thread finished: 基础代码提交测试 1-39
+2025-07-13 13:28:23,456 INFO o.a.j.t.JMeterThread: Thread started: 基础代码提交测试 1-40
+2025-07-13 13:28:23,532 INFO o.a.j.t.JMeterThread: Thread is done: 基础代码提交测试 1-40
+2025-07-13 13:28:23,532 INFO o.a.j.t.JMeterThread: Thread finished: 基础代码提交测试 1-40
+2025-07-13 13:28:23,554 INFO o.a.j.t.JMeterThread: Thread started: 基础代码提交测试 1-41
+2025-07-13 13:28:23,655 INFO o.a.j.t.JMeterThread: Thread started: 基础代码提交测试 1-42
+2025-07-13 13:28:23,666 INFO o.a.j.t.JMeterThread: Thread is done: 基础代码提交测试 1-41
+2025-07-13 13:28:23,666 INFO o.a.j.t.JMeterThread: Thread finished: 基础代码提交测试 1-41
+2025-07-13 13:28:23,722 INFO o.a.j.t.JMeterThread: Thread is done: 基础代码提交测试 1-42
+2025-07-13 13:28:23,722 INFO o.a.j.t.JMeterThread: Thread finished: 基础代码提交测试 1-42
+2025-07-13 13:28:23,755 INFO o.a.j.t.JMeterThread: Thread started: 基础代码提交测试 1-43
+2025-07-13 13:28:23,824 INFO o.a.j.t.JMeterThread: Thread is done: 基础代码提交测试 1-43
+2025-07-13 13:28:23,824 INFO o.a.j.t.JMeterThread: Thread finished: 基础代码提交测试 1-43
+2025-07-13 13:28:23,855 INFO o.a.j.t.JMeterThread: Thread started: 基础代码提交测试 1-44
+2025-07-13 13:28:23,921 INFO o.a.j.t.JMeterThread: Thread is done: 基础代码提交测试 1-44
+2025-07-13 13:28:23,921 INFO o.a.j.t.JMeterThread: Thread finished: 基础代码提交测试 1-44
+2025-07-13 13:28:23,954 INFO o.a.j.t.JMeterThread: Thread started: 基础代码提交测试 1-45
+2025-07-13 13:28:24,043 INFO o.a.j.t.JMeterThread: Thread is done: 基础代码提交测试 1-45
+2025-07-13 13:28:24,043 INFO o.a.j.t.JMeterThread: Thread finished: 基础代码提交测试 1-45
+2025-07-13 13:28:24,055 INFO o.a.j.t.JMeterThread: Thread started: 基础代码提交测试 1-46
+2025-07-13 13:28:24,139 INFO o.a.j.t.JMeterThread: Thread is done: 基础代码提交测试 1-46
+2025-07-13 13:28:24,139 INFO o.a.j.t.JMeterThread: Thread finished: 基础代码提交测试 1-46
+2025-07-13 13:28:24,156 INFO o.a.j.t.JMeterThread: Thread started: 基础代码提交测试 1-47
+2025-07-13 13:28:24,215 INFO o.a.j.t.JMeterThread: Thread is done: 基础代码提交测试 1-47
+2025-07-13 13:28:24,216 INFO o.a.j.t.JMeterThread: Thread finished: 基础代码提交测试 1-47
+2025-07-13 13:28:24,256 INFO o.a.j.t.JMeterThread: Thread started: 基础代码提交测试 1-48
+2025-07-13 13:28:24,330 INFO o.a.j.t.JMeterThread: Thread is done: 基础代码提交测试 1-48
+2025-07-13 13:28:24,330 INFO o.a.j.t.JMeterThread: Thread finished: 基础代码提交测试 1-48
+2025-07-13 13:28:24,356 INFO o.a.j.t.JMeterThread: Thread started: 基础代码提交测试 1-49
+2025-07-13 13:28:24,428 INFO o.a.j.t.JMeterThread: Thread is done: 基础代码提交测试 1-49
+2025-07-13 13:28:24,429 INFO o.a.j.t.JMeterThread: Thread finished: 基础代码提交测试 1-49
+2025-07-13 13:28:24,457 INFO o.a.j.t.JMeterThread: Thread started: 基础代码提交测试 1-50
+2025-07-13 13:28:24,513 INFO o.a.j.t.JMeterThread: Thread is done: 基础代码提交测试 1-50
+2025-07-13 13:28:24,513 INFO o.a.j.t.JMeterThread: Thread finished: 基础代码提交测试 1-50
+2025-07-13 13:28:24,555 INFO o.a.j.t.JMeterThread: Thread started: 基础代码提交测试 1-51
+2025-07-13 13:28:24,654 INFO o.a.j.t.JMeterThread: Thread started: 基础代码提交测试 1-52
+2025-07-13 13:28:24,656 INFO o.a.j.t.JMeterThread: Thread is done: 基础代码提交测试 1-51
+2025-07-13 13:28:24,656 INFO o.a.j.t.JMeterThread: Thread finished: 基础代码提交测试 1-51
+2025-07-13 13:28:24,726 INFO o.a.j.t.JMeterThread: Thread is done: 基础代码提交测试 1-52
+2025-07-13 13:28:24,726 INFO o.a.j.t.JMeterThread: Thread finished: 基础代码提交测试 1-52
+2025-07-13 13:28:24,757 INFO o.a.j.t.JMeterThread: Thread started: 基础代码提交测试 1-53
+2025-07-13 13:28:24,815 INFO o.a.j.t.JMeterThread: Thread is done: 基础代码提交测试 1-53
+2025-07-13 13:28:24,815 INFO o.a.j.t.JMeterThread: Thread finished: 基础代码提交测试 1-53
+2025-07-13 13:28:24,857 INFO o.a.j.t.JMeterThread: Thread started: 基础代码提交测试 1-54
+2025-07-13 13:28:24,923 INFO o.a.j.t.JMeterThread: Thread is done: 基础代码提交测试 1-54
+2025-07-13 13:28:24,923 INFO o.a.j.t.JMeterThread: Thread finished: 基础代码提交测试 1-54
+2025-07-13 13:28:24,956 INFO o.a.j.t.JMeterThread: Thread started: 基础代码提交测试 1-55
+2025-07-13 13:28:25,029 INFO o.a.j.t.JMeterThread: Thread is done: 基础代码提交测试 1-55
+2025-07-13 13:28:25,030 INFO o.a.j.t.JMeterThread: Thread finished: 基础代码提交测试 1-55
+2025-07-13 13:28:25,055 INFO o.a.j.t.JMeterThread: Thread started: 基础代码提交测试 1-56
+2025-07-13 13:28:25,149 INFO o.a.j.t.JMeterThread: Thread is done: 基础代码提交测试 1-56
+2025-07-13 13:28:25,149 INFO o.a.j.t.JMeterThread: Thread finished: 基础代码提交测试 1-56
+2025-07-13 13:28:25,154 INFO o.a.j.t.JMeterThread: Thread started: 基础代码提交测试 1-57
+2025-07-13 13:28:25,255 INFO o.a.j.t.JMeterThread: Thread started: 基础代码提交测试 1-58
+2025-07-13 13:28:25,355 INFO o.a.j.t.JMeterThread: Thread started: 基础代码提交测试 1-59
+2025-07-13 13:28:25,376 INFO o.a.j.t.JMeterThread: Thread is done: 基础代码提交测试 1-57
+2025-07-13 13:28:25,376 INFO o.a.j.t.JMeterThread: Thread finished: 基础代码提交测试 1-57
+2025-07-13 13:28:25,455 INFO o.a.j.t.JMeterThread: Thread started: 基础代码提交测试 1-60
+2025-07-13 13:28:25,464 INFO o.a.j.t.JMeterThread: Thread is done: 基础代码提交测试 1-58
+2025-07-13 13:28:25,465 INFO o.a.j.t.JMeterThread: Thread finished: 基础代码提交测试 1-58
+2025-07-13 13:28:25,555 INFO o.a.j.t.JMeterThread: Thread started: 基础代码提交测试 1-61
+2025-07-13 13:28:25,595 INFO o.a.j.t.JMeterThread: Thread is done: 基础代码提交测试 1-59
+2025-07-13 13:28:25,595 INFO o.a.j.t.JMeterThread: Thread finished: 基础代码提交测试 1-59
+2025-07-13 13:28:25,607 INFO o.a.j.t.JMeterThread: Thread is done: 基础代码提交测试 1-60
+2025-07-13 13:28:25,607 INFO o.a.j.t.JMeterThread: Thread finished: 基础代码提交测试 1-60
+2025-07-13 13:28:25,656 INFO o.a.j.t.JMeterThread: Thread started: 基础代码提交测试 1-62
+2025-07-13 13:28:25,681 INFO o.a.j.t.JMeterThread: Thread is done: 基础代码提交测试 1-61
+2025-07-13 13:28:25,681 INFO o.a.j.t.JMeterThread: Thread finished: 基础代码提交测试 1-61
+2025-07-13 13:28:25,756 INFO o.a.j.t.JMeterThread: Thread started: 基础代码提交测试 1-63
+2025-07-13 13:28:25,779 INFO o.a.j.t.JMeterThread: Thread is done: 基础代码提交测试 1-62
+2025-07-13 13:28:25,779 INFO o.a.j.t.JMeterThread: Thread finished: 基础代码提交测试 1-62
+2025-07-13 13:28:25,826 INFO o.a.j.t.JMeterThread: Thread is done: 基础代码提交测试 1-63
+2025-07-13 13:28:25,827 INFO o.a.j.t.JMeterThread: Thread finished: 基础代码提交测试 1-63
+2025-07-13 13:28:25,859 INFO o.a.j.t.JMeterThread: Thread started: 基础代码提交测试 1-64
+2025-07-13 13:28:25,957 INFO o.a.j.t.JMeterThread: Thread started: 基础代码提交测试 1-65
+2025-07-13 13:28:26,015 INFO o.a.j.t.JMeterThread: Thread is done: 基础代码提交测试 1-64
+2025-07-13 13:28:26,015 INFO o.a.j.t.JMeterThread: Thread finished: 基础代码提交测试 1-64
+2025-07-13 13:28:26,046 INFO o.a.j.t.JMeterThread: Thread is done: 基础代码提交测试 1-65
+2025-07-13 13:28:26,046 INFO o.a.j.t.JMeterThread: Thread finished: 基础代码提交测试 1-65
+2025-07-13 13:28:26,056 INFO o.a.j.t.JMeterThread: Thread started: 基础代码提交测试 1-66
+2025-07-13 13:28:26,146 INFO o.a.j.t.JMeterThread: Thread is done: 基础代码提交测试 1-66
+2025-07-13 13:28:26,147 INFO o.a.j.t.JMeterThread: Thread finished: 基础代码提交测试 1-66
+2025-07-13 13:28:26,156 INFO o.a.j.t.JMeterThread: Thread started: 基础代码提交测试 1-67
+2025-07-13 13:28:26,224 INFO o.a.j.t.JMeterThread: Thread is done: 基础代码提交测试 1-67
+2025-07-13 13:28:26,224 INFO o.a.j.t.JMeterThread: Thread finished: 基础代码提交测试 1-67
+2025-07-13 13:28:26,255 INFO o.a.j.t.JMeterThread: Thread started: 基础代码提交测试 1-68
+2025-07-13 13:28:26,337 INFO o.a.j.t.JMeterThread: Thread is done: 基础代码提交测试 1-68
+2025-07-13 13:28:26,337 INFO o.a.j.t.JMeterThread: Thread finished: 基础代码提交测试 1-68
+2025-07-13 13:28:26,356 INFO o.a.j.t.JMeterThread: Thread started: 基础代码提交测试 1-69
+2025-07-13 13:28:26,446 INFO o.a.j.t.JMeterThread: Thread is done: 基础代码提交测试 1-69
+2025-07-13 13:28:26,446 INFO o.a.j.t.JMeterThread: Thread finished: 基础代码提交测试 1-69
+2025-07-13 13:28:26,456 INFO o.a.j.t.JMeterThread: Thread started: 基础代码提交测试 1-70
+2025-07-13 13:28:26,539 INFO o.a.j.t.JMeterThread: Thread is done: 基础代码提交测试 1-70
+2025-07-13 13:28:26,539 INFO o.a.j.t.JMeterThread: Thread finished: 基础代码提交测试 1-70
+2025-07-13 13:28:26,555 INFO o.a.j.t.JMeterThread: Thread started: 基础代码提交测试 1-71
+2025-07-13 13:28:26,652 INFO o.a.j.t.JMeterThread: Thread is done: 基础代码提交测试 1-71
+2025-07-13 13:28:26,653 INFO o.a.j.t.JMeterThread: Thread finished: 基础代码提交测试 1-71
+2025-07-13 13:28:26,656 INFO o.a.j.t.JMeterThread: Thread started: 基础代码提交测试 1-72
+2025-07-13 13:28:26,753 INFO o.a.j.t.JMeterThread: Thread is done: 基础代码提交测试 1-72
+2025-07-13 13:28:26,754 INFO o.a.j.t.JMeterThread: Thread finished: 基础代码提交测试 1-72
+2025-07-13 13:28:26,756 INFO o.a.j.t.JMeterThread: Thread started: 基础代码提交测试 1-73
+2025-07-13 13:28:26,831 INFO o.a.j.t.JMeterThread: Thread is done: 基础代码提交测试 1-73
+2025-07-13 13:28:26,831 INFO o.a.j.t.JMeterThread: Thread finished: 基础代码提交测试 1-73
+2025-07-13 13:28:26,857 INFO o.a.j.t.JMeterThread: Thread started: 基础代码提交测试 1-74
+2025-07-13 13:28:26,927 INFO o.a.j.t.JMeterThread: Thread is done: 基础代码提交测试 1-74
+2025-07-13 13:28:26,927 INFO o.a.j.t.JMeterThread: Thread finished: 基础代码提交测试 1-74
+2025-07-13 13:28:26,955 INFO o.a.j.t.JMeterThread: Thread started: 基础代码提交测试 1-75
+2025-07-13 13:28:27,027 INFO o.a.j.t.JMeterThread: Thread is done: 基础代码提交测试 1-75
+2025-07-13 13:28:27,027 INFO o.a.j.t.JMeterThread: Thread finished: 基础代码提交测试 1-75
+2025-07-13 13:28:27,056 INFO o.a.j.t.JMeterThread: Thread started: 基础代码提交测试 1-76
+2025-07-13 13:28:27,162 INFO o.a.j.t.JMeterThread: Thread started: 基础代码提交测试 1-77
+2025-07-13 13:28:27,167 INFO o.a.j.t.JMeterThread: Thread is done: 基础代码提交测试 1-76
+2025-07-13 13:28:27,167 INFO o.a.j.t.JMeterThread: Thread finished: 基础代码提交测试 1-76
+2025-07-13 13:28:27,255 INFO o.a.j.t.JMeterThread: Thread started: 基础代码提交测试 1-78
+2025-07-13 13:28:27,272 INFO o.a.j.t.JMeterThread: Thread is done: 基础代码提交测试 1-77
+2025-07-13 13:28:27,272 INFO o.a.j.t.JMeterThread: Thread finished: 基础代码提交测试 1-77
+2025-07-13 13:28:27,356 INFO o.a.j.t.JMeterThread: Thread started: 基础代码提交测试 1-79
+2025-07-13 13:28:27,373 INFO o.a.j.t.JMeterThread: Thread is done: 基础代码提交测试 1-78
+2025-07-13 13:28:27,373 INFO o.a.j.t.JMeterThread: Thread finished: 基础代码提交测试 1-78
+2025-07-13 13:28:27,416 INFO o.a.j.t.JMeterThread: Thread is done: 基础代码提交测试 1-79
+2025-07-13 13:28:27,416 INFO o.a.j.t.JMeterThread: Thread finished: 基础代码提交测试 1-79
+2025-07-13 13:28:27,456 INFO o.a.j.t.JMeterThread: Thread started: 基础代码提交测试 1-80
+2025-07-13 13:28:27,520 INFO o.a.j.t.JMeterThread: Thread is done: 基础代码提交测试 1-80
+2025-07-13 13:28:27,520 INFO o.a.j.t.JMeterThread: Thread finished: 基础代码提交测试 1-80
+2025-07-13 13:28:27,556 INFO o.a.j.t.JMeterThread: Thread started: 基础代码提交测试 1-81
+2025-07-13 13:28:27,668 INFO o.a.j.t.JMeterThread: Thread started: 基础代码提交测试 1-82
+2025-07-13 13:28:27,696 INFO o.a.j.t.JMeterThread: Thread is done: 基础代码提交测试 1-81
+2025-07-13 13:28:27,697 INFO o.a.j.t.JMeterThread: Thread finished: 基础代码提交测试 1-81
+2025-07-13 13:28:27,761 INFO o.a.j.t.JMeterThread: Thread started: 基础代码提交测试 1-83
+2025-07-13 13:28:27,868 INFO o.a.j.t.JMeterThread: Thread started: 基础代码提交测试 1-84
+2025-07-13 13:28:27,894 INFO o.a.j.t.JMeterThread: Thread is done: 基础代码提交测试 1-82
+2025-07-13 13:28:27,894 INFO o.a.j.t.JMeterThread: Thread finished: 基础代码提交测试 1-82
+2025-07-13 13:28:27,950 INFO o.a.j.t.JMeterThread: Thread is done: 基础代码提交测试 1-83
+2025-07-13 13:28:27,950 INFO o.a.j.t.JMeterThread: Thread finished: 基础代码提交测试 1-83
+2025-07-13 13:28:27,959 INFO o.a.j.t.JMeterThread: Thread started: 基础代码提交测试 1-85
+2025-07-13 13:28:27,966 INFO o.a.j.t.JMeterThread: Thread is done: 基础代码提交测试 1-84
+2025-07-13 13:28:27,966 INFO o.a.j.t.JMeterThread: Thread finished: 基础代码提交测试 1-84
+2025-07-13 13:28:28,018 INFO o.a.j.t.JMeterThread: Thread is done: 基础代码提交测试 1-85
+2025-07-13 13:28:28,018 INFO o.a.j.t.JMeterThread: Thread finished: 基础代码提交测试 1-85
+2025-07-13 13:28:28,066 INFO o.a.j.t.JMeterThread: Thread started: 基础代码提交测试 1-86
+2025-07-13 13:28:28,160 INFO o.a.j.t.JMeterThread: Thread started: 基础代码提交测试 1-87
+2025-07-13 13:28:28,197 INFO o.a.j.t.JMeterThread: Thread is done: 基础代码提交测试 1-86
+2025-07-13 13:28:28,197 INFO o.a.j.t.JMeterThread: Thread finished: 基础代码提交测试 1-86
+2025-07-13 13:28:28,268 INFO o.a.j.t.JMeterThread: Thread started: 基础代码提交测试 1-88
+2025-07-13 13:28:28,281 INFO o.a.j.t.JMeterThread: Thread is done: 基础代码提交测试 1-87
+2025-07-13 13:28:28,282 INFO o.a.j.t.JMeterThread: Thread finished: 基础代码提交测试 1-87
+2025-07-13 13:28:28,343 INFO o.a.j.t.JMeterThread: Thread is done: 基础代码提交测试 1-88
+2025-07-13 13:28:28,343 INFO o.a.j.t.JMeterThread: Thread finished: 基础代码提交测试 1-88
+2025-07-13 13:28:28,364 INFO o.a.j.t.JMeterThread: Thread started: 基础代码提交测试 1-89
+2025-07-13 13:28:28,468 INFO o.a.j.t.JMeterThread: Thread started: 基础代码提交测试 1-90
+2025-07-13 13:28:28,506 INFO o.a.j.t.JMeterThread: Thread is done: 基础代码提交测试 1-89
+2025-07-13 13:28:28,506 INFO o.a.j.t.JMeterThread: Thread finished: 基础代码提交测试 1-89
+2025-07-13 13:28:28,556 INFO o.a.j.t.JMeterThread: Thread is done: 基础代码提交测试 1-90
+2025-07-13 13:28:28,556 INFO o.a.j.t.JMeterThread: Thread finished: 基础代码提交测试 1-90
+2025-07-13 13:28:28,560 INFO o.a.j.t.JMeterThread: Thread started: 基础代码提交测试 1-91
+2025-07-13 13:28:28,668 INFO o.a.j.t.JMeterThread: Thread started: 基础代码提交测试 1-92
+2025-07-13 13:28:28,673 INFO o.a.j.t.JMeterThread: Thread is done: 基础代码提交测试 1-91
+2025-07-13 13:28:28,673 INFO o.a.j.t.JMeterThread: Thread finished: 基础代码提交测试 1-91
+2025-07-13 13:28:28,759 INFO o.a.j.t.JMeterThread: Thread started: 基础代码提交测试 1-93
+2025-07-13 13:28:28,786 INFO o.a.j.t.JMeterThread: Thread is done: 基础代码提交测试 1-92
+2025-07-13 13:28:28,786 INFO o.a.j.t.JMeterThread: Thread finished: 基础代码提交测试 1-92
+2025-07-13 13:28:28,839 INFO o.a.j.t.JMeterThread: Thread is done: 基础代码提交测试 1-93
+2025-07-13 13:28:28,839 INFO o.a.j.t.JMeterThread: Thread finished: 基础代码提交测试 1-93
+2025-07-13 13:28:28,866 INFO o.a.j.t.JMeterThread: Thread started: 基础代码提交测试 1-94
+2025-07-13 13:28:28,939 INFO o.a.j.t.JMeterThread: Thread is done: 基础代码提交测试 1-94
+2025-07-13 13:28:28,939 INFO o.a.j.t.JMeterThread: Thread finished: 基础代码提交测试 1-94
+2025-07-13 13:28:28,958 INFO o.a.j.t.JMeterThread: Thread started: 基础代码提交测试 1-95
+2025-07-13 13:28:29,046 INFO o.a.j.t.JMeterThread: Thread is done: 基础代码提交测试 1-95
+2025-07-13 13:28:29,046 INFO o.a.j.t.JMeterThread: Thread finished: 基础代码提交测试 1-95
+2025-07-13 13:28:29,064 INFO o.a.j.t.JMeterThread: Thread started: 基础代码提交测试 1-96
+2025-07-13 13:28:29,156 INFO o.a.j.t.JMeterThread: Thread started: 基础代码提交测试 1-97
+2025-07-13 13:28:29,191 INFO o.a.j.t.JMeterThread: Thread is done: 基础代码提交测试 1-96
+2025-07-13 13:28:29,191 INFO o.a.j.t.JMeterThread: Thread finished: 基础代码提交测试 1-96
+2025-07-13 13:28:29,264 INFO o.a.j.t.JMeterThread: Thread started: 基础代码提交测试 1-98
+2025-07-13 13:28:29,302 INFO o.a.j.t.JMeterThread: Thread is done: 基础代码提交测试 1-97
+2025-07-13 13:28:29,302 INFO o.a.j.t.JMeterThread: Thread finished: 基础代码提交测试 1-97
+2025-07-13 13:28:29,346 INFO o.a.j.t.JMeterThread: Thread is done: 基础代码提交测试 1-98
+2025-07-13 13:28:29,346 INFO o.a.j.t.JMeterThread: Thread finished: 基础代码提交测试 1-98
+2025-07-13 13:28:29,369 INFO o.a.j.t.JMeterThread: Thread started: 基础代码提交测试 1-99
+2025-07-13 13:28:29,440 INFO o.a.j.t.JMeterThread: Thread is done: 基础代码提交测试 1-99
+2025-07-13 13:28:29,440 INFO o.a.j.t.JMeterThread: Thread finished: 基础代码提交测试 1-99
+2025-07-13 13:28:29,460 INFO o.a.j.t.JMeterThread: Thread started: 基础代码提交测试 1-100
+2025-07-13 13:28:29,539 INFO o.a.j.t.JMeterThread: Thread is done: 基础代码提交测试 1-100
+2025-07-13 13:28:29,539 INFO o.a.j.t.JMeterThread: Thread finished: 基础代码提交测试 1-100
+2025-07-13 13:28:29,540 INFO o.a.j.e.StandardJMeterEngine: Notifying test listeners of end of test
+2025-07-13 13:28:29,540 INFO o.a.j.g.u.JMeterMenuBar: setRunning(false, *local*)

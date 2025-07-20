@@ -1,5 +1,6 @@
 package cn.icongyou.messaging;
 
+import cn.icongyou.Constants;
 import cn.icongyou.common.CodeExecutionResult;
 import cn.icongyou.config.RabbitMQConfig;
 import org.springframework.amqp.rabbit.core.RabbitTemplate;
@@ -23,7 +24,7 @@ public class JudgeResultProducer {
     }
 
     public void sendResult(CodeExecutionResult result) {
-        rabbitTemplate.convertAndSend(RabbitMQConfig.RESULT_QUEUE, result);
+        rabbitTemplate.convertAndSend(Constants.RESULT_QUEUE, result);
     }
 }
 

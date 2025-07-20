@@ -1,5 +1,6 @@
 package cn.icongyou.listener;
 
+import cn.icongyou.Constants;
 import cn.icongyou.common.CodeExecutionRequest;
 import cn.icongyou.common.CodeExecutionResult;
 import cn.icongyou.common.JudgeStatus;
@@ -35,7 +36,7 @@ public class JudgeConsumer {
         this.producer = producer;
     }
 
-    @RabbitListener(queues = "judge.queue")
+    @RabbitListener(queues = Constants.JUDGE_QUEUE)
     public void onMessage(CodeExecutionRequest request) {
         try {
             logger.info("开始处理提交ID: {}", request.getSubmissionId());

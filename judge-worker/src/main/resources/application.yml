@@ -4,6 +4,10 @@ spring:
     port: 5672
     username: guest
     password: guest
+    # 消息队列并发参数配置
+    concurrent-consumers: 8
+    max-concurrent-consumers: 15
+    prefetch-count: 3
     # 连接池配置
     cache:
       channel:
@@ -22,20 +26,15 @@ spring:
         max-interval: 10000
         multiplier: 1.0
 
-# 线程池配置
-thread-pool:
-  core-size: 10
-  max-size: 20
-  queue-capacity: 100
-  keep-alive-seconds: 60
-
-# 执行器配置
+# Docker 执行器配置
 executor:
-  timeout-seconds: 30
-  memory-limit-mb: 512
-  cpu-limit: 1.0
-  pool-size: 5   # 减少初始容器池大小，因为使用异步执行
+  memory-limit-mb: 256
+  cpu-limit: 1
+  pool-size: 7   # 减少初始容器池大小，因为使用异步执行
   max-containers: 20  # 减少最大容器数，避免资源浪费
+  # 容器清理策略配置
+  enable-pre-cleanup: false   # 是否启用获取容器前的预清理
+  enable-post-cleanup: true  # 是否启用释放容器后的后清理
 
 # Docker配置
 docker:
@@ -51,7 +50,6 @@ instance:
 
 logging:
   level:
-    org.example: debug
     cn.icongyou: info
     com.github.dockerjava: warn  # 减少docker-java的日志输出
   pattern:

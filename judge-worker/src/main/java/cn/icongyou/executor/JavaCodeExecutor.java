@@ -1,5 +1,6 @@
 package cn.icongyou.executor;
 
+import cn.icongyou.Constants;
 import cn.icongyou.common.CodeExecutionRequest;
 import cn.icongyou.common.CodeExecutionResult;
 import cn.icongyou.common.JudgeStatus;
@@ -28,11 +29,11 @@ public class JavaCodeExecutor {
     
     // 线程池配置
     private static final ExecutorService executorService = new ThreadPoolExecutor(
-        10, // 核心线程数
-        20, // 最大线程数
-        60L, // 空闲线程存活时间
+        Constants.CORE_SIZE, // 核心线程数
+        Constants.MAX_SIZE, // 最大线程数
+        Constants.KEEP_ALIVE_SECONDS, // 空闲线程存活时间
         TimeUnit.SECONDS,
-        new LinkedBlockingQueue<>(100), // 工作队列
+        new LinkedBlockingQueue<>(Constants.QUEUE_CAPACITY), // 工作队列
         new ThreadPoolExecutor.CallerRunsPolicy() // 拒绝策略
     );
     
@@ -164,16 +165,10 @@ public class JavaCodeExecutor {
             logger.info("提交ID: {} 运行结束，状态: {}, 耗时: {}ms", 
                        request.getSubmissionId(), result.getStatus(), result.getExecutionTimeMs());
             
-        } finally {
-            // 异步清理容器中的文件
-            CompletableFuture.runAsync(() -> {
-                try {
-                    containerPool.executeCommandAsync(containerName, "sh", "-c", 
-                        "rm -f /workspace/" + filename + " /workspace/" + className + ".class");
-                } catch (Exception e) {
-                    logger.debug("清理容器文件时发生错误: {}", e.getMessage());
-                }
-            });
+        } catch (Exception e) {
+            logger.error("提交ID: {} 执行过程中发生异常", request.getSubmissionId(), e);
+            result.setStatus(JudgeStatus.INTERNAL_ERROR);
+            result.setStderr("执行过程中发生异常: " + e.getMessage());
         }
         
         return result;
@@ -207,33 +202,12 @@ public class JavaCodeExecutor {
                 
                 String output = outputFuture.get(30, TimeUnit.SECONDS);
                 
-                // 异步清理输入文件
-                CompletableFuture.runAsync(() -> {
-                    try {
-                        containerPool.executeCommandAsync(containerName, "sh", "-c", "rm -f /workspace/input.txt");
-                    } catch (Exception e) {
-                        logger.debug("清理输入文件时发生错误: {}", e.getMessage());
-                    }
-                });
-                
                 return output;
             } catch (Exception e) {
                 logger.error("直接在容器内执行带输入的命令时发生错误", e);
                 return "";
             }
         });
-    }
-    
-    // 关闭线程池
-    public static void shutdown() {
-        executorService.shutdown();
-        try {
-            if (!executorService.awaitTermination(60, TimeUnit.SECONDS)) {
-                executorService.shutdownNow();
-            }
-        } catch (InterruptedException e) {
-            executorService.shutdownNow();
-        }
     }
 }
 
